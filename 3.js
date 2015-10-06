@@ -1,0 +1,1 @@
+document.getElementById("loaded").innerHTML += "3.js<br/>";

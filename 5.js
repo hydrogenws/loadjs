@@ -1,0 +1,1 @@
+document.getElementById("loaded").innerHTML += "5.js<br/>";

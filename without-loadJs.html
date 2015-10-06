@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Without loadJs</title>
+</head>
+<body>
+
+<h1>Without loadJs</h1>
+
+<fieldset id="files">
+    <legend>Files list</legend>
+</fieldset>
+
+<fieldset id="loaded">
+    <legend>Loaded file</legend>
+</fieldset>
+
+<p>You can refresh the page and check Loaded list</p>
+
+
+<script>
+    function loadJS(src) {
+        var script = document.createElement('script');
+        script.setAttribute('src', src);
+        script.setAttribute('type', 'text/javascript');
+        return document.body.appendChild(script);
+    }
+
+
+    var files = [
+        '1.js',
+        '2.js',
+        '3.js',
+        '4.js',
+        '5.js'
+    ];
+
+    for (var i in files) {
+        var js = loadJS(files[i]);
+        document.getElementById("files").innerHTML += files[i] + "<br/>";
+    }
+
+</script>
+
+</body>
+</html>
